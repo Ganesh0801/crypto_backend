@@ -173,6 +173,7 @@ SIMPLE_JWT = {
 # for react connection
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    "https://crypto-frontend-7nuu94ewh-ganesh-bs-projects.vercel.app",
 ]
 
 ASGI_APPLICATION = "backend.asgi.application"
