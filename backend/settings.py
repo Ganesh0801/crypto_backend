@@ -97,14 +97,27 @@ ASGI_APPLICATION = 'backend.asgi.application'
 
 AUTH_USER_MODEL = 'wallet.User'
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('DB_NAME', 'cryptowalletdb'),
+#         'USER': os.environ.get('DB_USER', 'cryptowalletuser'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD', 'crypto2025!'),
+#         'HOST': os.environ.get('DB_HOST', 'localhost'),
+#         'PORT': os.environ.get('DB_PORT', '5432'),
+#     }
+# }
+
+import os
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', 'cryptowalletdb'),
-        'USER': os.environ.get('DB_USER', 'cryptowalletuser'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'crypto2025!'),
-        'HOST': os.environ.get('DB_HOST', 'localhost'),
-        'PORT': os.environ.get('DB_PORT', '5432'),
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.environ.get("DB_NAME"),
+        "USER": os.environ.get("DB_USER"),
+        "PASSWORD": os.environ.get("DB_PASSWORD"),
+        "HOST": os.environ.get("DB_HOST"),
+        "PORT": os.environ.get("DB_PORT", "5432"),
     }
 }
 
